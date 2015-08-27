@@ -15,6 +15,8 @@ namespace RiskAnalysis.Web.Controllers
             var settledBets = Services.SettledBetService.GetAllBets();
             var unsettledBets = Services.UnsettledBetService.GetAllBets();
 
+            var unusualCustomers = Services.CustomerAnalysisService.GetUnusualCustomers(customers, settledBets);
+
             return View();
         }
     }

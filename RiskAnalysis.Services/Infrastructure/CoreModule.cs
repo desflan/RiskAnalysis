@@ -4,6 +4,8 @@ using Autofac.Extras.AggregateService;
 using RiskAnalysis.DataAccess.Models;
 using RiskAnalysis.DataAccess.Models.Interfaces;
 using RiskAnalysis.Services.Services;
+using RiskAnalysis.Services.Services.Calculator;
+using RiskAnalysis.Services.Services.Calculator.Interfaces;
 using RiskAnalysis.Services.Services.Interfaces;
 
 namespace RiskAnalysis.Services.Infrastructure
@@ -20,6 +22,8 @@ namespace RiskAnalysis.Services.Infrastructure
             builder.RegisterType<CustomerService>().As<ICustomerService>();
             builder.RegisterType<SettledBetService>().As<ISettledBetService>();
             builder.RegisterType<UnsettledBetService>().As<IUnsettledBetService>();
+            builder.RegisterType<CustomerAnalysisService>().As<ICustomerAnalysisService>();
+            builder.RegisterType<CustomerCalculatorService>().As<ICustomerCalculatorService>();
 
 
             base.Load(builder);

@@ -5,5 +5,6 @@
         ICustomerService CustomerService { get; }
         ISettledBetService SettledBetService { get; }
         IUnsettledBetService UnsettledBetService { get; }
+        ICustomerAnalysisService CustomerAnalysisService { get; }
     }
 }
