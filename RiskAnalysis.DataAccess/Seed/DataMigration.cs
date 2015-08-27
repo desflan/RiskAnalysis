@@ -24,9 +24,26 @@ namespace RiskAnalysis.DataAccess.Seed
 
         public void InsertData()
         {
-            InsertCustomers();
-            InsertSettledData();
-            InsertUnsettledData();
+            if (!_context.SettledBets.Any())
+            {
+                InsertCustomers();
+                InsertSettledData();
+                InsertUnsettledData();
+                UpdateCustomers();
+            }
+        }
+
+        private void UpdateCustomers()
+        {
+            var customers = _context.Customers;
+
+            foreach (var customer in customers)
+            {
+                customer.AverageBet = customer.SettledBets.Average(sb => sb.Stake);
+            }
+
+            _context.SaveChanges();
+
         }
 
         private void InsertCustomers()
