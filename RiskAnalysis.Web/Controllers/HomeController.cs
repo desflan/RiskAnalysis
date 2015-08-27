@@ -1,30 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using RiskAnalysis.Services.Services.Interfaces;
 
-namespace RiskAnalysis.Controllers
+namespace RiskAnalysis.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+        public HomeController(IServices services)
+            : base(services)
+        { }
+        
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your app description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            var customers = Services.CustomerService.GetAllCustomers();
 
             return View();
         }

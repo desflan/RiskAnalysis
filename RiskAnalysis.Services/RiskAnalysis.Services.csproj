@@ -42,6 +42,10 @@
     <Reference Include="Castle.Core">
       <HintPath>..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,7 +59,11 @@
     <Compile Include="DTO\CustomerModel.cs" />
     <Compile Include="DTO\SettledBetModel.cs" />
     <Compile Include="DTO\UnsettledBetModel.cs" />
+    <Compile Include="Infrastructure\CoreModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\Interfaces\ICustomerService.cs" />
+    <Compile Include="Services\Interfaces\IServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RiskAnalysis.DataAccess\RiskAnalysis.DataAccess.csproj">

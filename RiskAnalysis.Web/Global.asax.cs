@@ -13,6 +13,7 @@ namespace RiskAnalysis.Web
     {
         protected void Application_Start()
         {
+            IocConfig.Configure();
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
