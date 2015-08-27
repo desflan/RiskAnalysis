@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.DataAccess", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.Services", "RiskAnalysis.Services\RiskAnalysis.Services.csproj", "{D023ECA9-C8CF-406E-A823-F5175920D626}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.Services.Tests", "RiskAnalysis.Services.Tests\RiskAnalysis.Services.Tests.csproj", "{5756F13F-2353-4875-BBBA-D4BCD26C6B2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{D023ECA9-C8CF-406E-A823-F5175920D626}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D023ECA9-C8CF-406E-A823-F5175920D626}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D023ECA9-C8CF-406E-A823-F5175920D626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5756F13F-2353-4875-BBBA-D4BCD26C6B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5756F13F-2353-4875-BBBA-D4BCD26C6B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5756F13F-2353-4875-BBBA-D4BCD26C6B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5756F13F-2353-4875-BBBA-D4BCD26C6B2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

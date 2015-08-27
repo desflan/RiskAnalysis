@@ -21,9 +21,9 @@ namespace RiskAnalysis.Services.Services
 
         public List<CustomerModel> GetUnusualCustomers(IEnumerable<CustomerModel> customers, IEnumerable<SettledBetModel> settledBets)
         {
-            var unusualWinRate = new UnusualWinRate(customers, settledBets);
+            var highWinRate = new HighWinRate(customers, settledBets);
 
-            return _calculator.DoCalculation(unusualWinRate);
+            return _calculator.DoCalculation(highWinRate);
         }
     }
 }

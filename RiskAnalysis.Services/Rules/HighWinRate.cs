@@ -8,12 +8,12 @@ using RiskAnalysis.Services.Rules.Interfaces;
 
 namespace RiskAnalysis.Services.Rules
 {
-    public class UnusualWinRate : ICustomerRisk
+    public class HighWinRate : ICustomerRisk
     {
         private readonly IEnumerable<CustomerModel> _customers;
         private readonly IEnumerable<SettledBetModel> _settledBets;
 
-        public UnusualWinRate(IEnumerable<CustomerModel> customers, IEnumerable<SettledBetModel> settledBets )
+        public HighWinRate(IEnumerable<CustomerModel> customers, IEnumerable<SettledBetModel> settledBets )
         {
             _customers = customers;
             _settledBets = settledBets;

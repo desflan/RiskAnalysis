@@ -63,7 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\Interfaces\IBetRisk.cs" />
     <Compile Include="Rules\Interfaces\ICustomerRisk.cs" />
-    <Compile Include="Rules\UnusualWinRate.cs" />
+    <Compile Include="Rules\HighWinRate.cs" />
     <Compile Include="Services\Calculator\BetCalculatorService.cs" />
     <Compile Include="Services\Calculator\CustomerCalculatorService.cs" />
     <Compile Include="Services\Calculator\Interfaces\IBetCalculatorService.cs" />
