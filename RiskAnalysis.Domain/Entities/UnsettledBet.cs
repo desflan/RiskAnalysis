@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RiskAnalysis.Domain.Entities
+﻿namespace RiskAnalysis.Domain.Entities
 {
-    public class UnsettledBet
+    public class UnsettledBet : Bet
     {
         public decimal ToWin { get; set; }
     }
