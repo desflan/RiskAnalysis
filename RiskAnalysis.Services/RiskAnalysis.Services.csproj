@@ -61,6 +61,12 @@
     <Compile Include="DTO\UnsettledBetModel.cs" />
     <Compile Include="Infrastructure\CoreModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\Interfaces\IBetRisk.cs" />
+    <Compile Include="Rules\Interfaces\ICustomerRisk.cs" />
+    <Compile Include="Services\Calculator\BetCalculatorService.cs" />
+    <Compile Include="Services\Calculator\CustomerCalculatorService.cs" />
+    <Compile Include="Services\Calculator\Interfaces\IBetCalculatorService.cs" />
+    <Compile Include="Services\Calculator\Interfaces\ICustomerCalculatorService.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\Interfaces\ICustomerService.cs" />
     <Compile Include="Services\Interfaces\IServices.cs" />
@@ -84,6 +90,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
