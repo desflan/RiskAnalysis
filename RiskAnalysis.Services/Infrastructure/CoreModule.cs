@@ -23,7 +23,9 @@ namespace RiskAnalysis.Services.Infrastructure
             builder.RegisterType<SettledBetService>().As<ISettledBetService>();
             builder.RegisterType<UnsettledBetService>().As<IUnsettledBetService>();
             builder.RegisterType<CustomerAnalysisService>().As<ICustomerAnalysisService>();
+            builder.RegisterType<UnsettledBetAnalysisService>().As<IUnsettledBetAnalysisService>();
             builder.RegisterType<CustomerCalculatorService>().As<ICustomerCalculatorService>();
+            builder.RegisterType<BetCalculatorService>().As<IBetCalculatorService>();
 
 
             base.Load(builder);
