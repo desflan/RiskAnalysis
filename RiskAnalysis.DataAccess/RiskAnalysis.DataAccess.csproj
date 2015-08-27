@@ -33,6 +33,9 @@
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="CsvHelper">
       <HintPath>..\packages\CsvHelper.2.13.2.0\lib\net40-client\CsvHelper.dll</HintPath>
     </Reference>
