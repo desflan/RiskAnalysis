@@ -58,6 +58,7 @@
     <Compile Include="DTO\BetModel.cs" />
     <Compile Include="DTO\CustomerModel.cs" />
     <Compile Include="DTO\SettledBetModel.cs" />
+    <Compile Include="DTO\SummaryDataModel.cs" />
     <Compile Include="DTO\UnsettledBetModel.cs" />
     <Compile Include="Infrastructure\CoreModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

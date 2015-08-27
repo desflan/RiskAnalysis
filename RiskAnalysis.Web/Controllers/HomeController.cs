@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using RiskAnalysis.Services.DTO;
 using RiskAnalysis.Services.Services.Interfaces;
 
 namespace RiskAnalysis.Web.Controllers
@@ -15,17 +16,19 @@ namespace RiskAnalysis.Web.Controllers
             var settledBets = Services.SettledBetService.GetAllBets();
             var unsettledBets = Services.UnsettledBetService.GetAllBets();
 
-            var unusualCustomers = Services.CustomerAnalysisService.GetUnusualCustomers(customers, settledBets);
-            var betsFromUnusualCustomers =
-                Services.UnsettledBetAnalysisService.GetBetsFromUnusualCustomers(unusualCustomers, unsettledBets);
-            var bets10TimesAboveAvg = Services.UnsettledBetAnalysisService.GetBetsWithStake10TimesAboveAvg(customers,
+            var model = new SummaryDataModel();
+
+            model.CustomersWithHighWinRate = Services.CustomerAnalysisService.GetUnusualCustomers(customers, settledBets);
+            model.BetsFromUnusualCustomers =
+                Services.UnsettledBetAnalysisService.GetBetsFromUnusualCustomers(model.CustomersWithHighWinRate, unsettledBets);
+            model.Bet10TimesHigherThanAvg = Services.UnsettledBetAnalysisService.GetBetsWithStake10TimesAboveAvg(customers,
                                                                                                            unsettledBets);
-            var bets30TimesAboveAvg = Services.UnsettledBetAnalysisService.GetBetsWithStake30TimesAboveAvg(customers,
+            model.Bet30TimesHigherThanAvg = Services.UnsettledBetAnalysisService.GetBetsWithStake30TimesAboveAvg(customers,
                                                                                                            unsettledBets);
-            var betsWithHighWinAmount = Services.UnsettledBetAnalysisService.GetBetsWithLargeWinAmount(unsettledBets);
+            model.BetsWithHighWinAmount = Services.UnsettledBetAnalysisService.GetBetsWithLargeWinAmount(unsettledBets);
 
 
-            return View();
+            return View(model);
         }
     }
 }
