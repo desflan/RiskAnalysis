@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.Web", "RiskAnalysis.Web\RiskAnalysis.Web.csproj", "{98C10580-4DB9-4206-B8C2-05861C3D691C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.Domain", "RiskAnalysis.Domain\RiskAnalysis.Domain.csproj", "{397E934C-3C46-493C-A2ED-6C4F4FB590FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.DataAccess", "RiskAnalysis.DataAccess\RiskAnalysis.DataAccess.csproj", "{7CCE1239-C6CA-418F-AF8B-72D787917BA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAnalysis.Services", "RiskAnalysis.Services\RiskAnalysis.Services.csproj", "{D023ECA9-C8CF-406E-A823-F5175920D626}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98C10580-4DB9-4206-B8C2-05861C3D691C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C10580-4DB9-4206-B8C2-05861C3D691C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C10580-4DB9-4206-B8C2-05861C3D691C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C10580-4DB9-4206-B8C2-05861C3D691C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397E934C-3C46-493C-A2ED-6C4F4FB590FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397E934C-3C46-493C-A2ED-6C4F4FB590FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397E934C-3C46-493C-A2ED-6C4F4FB590FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397E934C-3C46-493C-A2ED-6C4F4FB590FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CCE1239-C6CA-418F-AF8B-72D787917BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CCE1239-C6CA-418F-AF8B-72D787917BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CCE1239-C6CA-418F-AF8B-72D787917BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CCE1239-C6CA-418F-AF8B-72D787917BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D023ECA9-C8CF-406E-A823-F5175920D626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D023ECA9-C8CF-406E-A823-F5175920D626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D023ECA9-C8CF-406E-A823-F5175920D626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D023ECA9-C8CF-406E-A823-F5175920D626}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
