@@ -64,6 +64,12 @@
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\Interfaces\ICustomerService.cs" />
     <Compile Include="Services\Interfaces\IServices.cs" />
+    <Compile Include="Services\Interfaces\ISettledBetService.cs" />
+    <Compile Include="Services\Interfaces\IUnsettledBetService.cs" />
+    <Compile Include="Services\SettledBetAnalysisService.cs" />
+    <Compile Include="Services\SettledBetService.cs" />
+    <Compile Include="Services\UnsettledBetAnalysisService.cs" />
+    <Compile Include="Services\UnsettledBetService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RiskAnalysis.DataAccess\RiskAnalysis.DataAccess.csproj">

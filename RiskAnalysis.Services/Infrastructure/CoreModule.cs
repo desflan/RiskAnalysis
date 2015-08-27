@@ -18,6 +18,8 @@ namespace RiskAnalysis.Services.Infrastructure
             builder.RegisterAggregateService<IServices>();
 
             builder.RegisterType<CustomerService>().As<ICustomerService>();
+            builder.RegisterType<SettledBetService>().As<ISettledBetService>();
+            builder.RegisterType<UnsettledBetService>().As<IUnsettledBetService>();
 
 
             base.Load(builder);
