@@ -16,6 +16,55 @@
             <div class="col-md-2 text-center"><strong>To win</strong></div>
         </div>
         @Html.DisplayFor(m => m.Bet30TimesHigherThanAvg)
-
     </div>
+    <div class="jumbotron">
+			<h2>Risky Bets</h2>
+			<hr/>
+			<h4>Bets With High Win Amount</h4>
+			<div class="row">
+				<div class="col-md-1 text-center"><strong>Bet Id</strong></div>
+				<div class="col-md-1 text-center"><strong>Customer	Id</strong></div>
+				<div class="col-md-2 text-center"><strong>Customer Name</strong></div>
+				<div class="col-md-2 text-center"><strong>Event	Id</strong></div>
+				<div class="col-md-2 text-center"><strong>Participant	Id</strong></div>
+				<div class="col-md-2 text-center"><strong>Stake</strong></div>
+				<div class="col-md-2 text-center"><strong>To win</strong></div>
+			</div>
+			@Html.DisplayFor(m => m.BetsWithHighWinAmount)
+			<hr />
+			<h4>Bets From Customers With High Win Rate</h4>
+			<div class="row">
+				<div class="col-md-1 text-center"><strong>Bet Id</strong></div>
+				<div class="col-md-1 text-center"><strong>Customer	Id</strong></div>
+				<div class="col-md-2 text-center"><strong>Customer Name</strong></div>
+				<div class="col-md-2 text-center"><strong>Event	Id</strong></div>
+				<div class="col-md-2 text-center"><strong>Participant	Id</strong></div>
+				<div class="col-md-2 text-center"><strong>Stake</strong></div>
+				<div class="col-md-2 text-center"><strong>To win</strong></div>
+			</div>
+			@Html.DisplayFor(m => m.BetsFromUnusualCustomers)
+		</div>
+
+		<div class="jumbotron">
+			<h2>Unusual Customer Activity</h2>
+			<hr/>
+			<h4>Customers With High Win Rate</h4>
+			<div class="row">
+				<div class="col-md-4 text-center"><strong>Customer Id</strong></div>
+				<div class="col-md-4 text-center"><strong>Customer	Name</strong></div>
+			</div>
+			@Html.DisplayFor(m => m.CustomersWithHighWinRate)
+			<hr />
+			<h4>Bets 10 Times Above Customer Average</h4>
+			<div class="row">
+				<div class="col-md-1 text-center"><strong>Bet Id</strong></div>
+				<div class="col-md-1 text-center"><strong>Customer	Id</strong></div>
+				<div class="col-md-2 text-center"><strong>Customer Name</strong></div>
+				<div class="col-md-2 text-center"><strong>Event	Id</strong></div>
+				<div class="col-md-2 text-center"><strong>Participant	Id</strong></div>
+				<div class="col-md-2 text-center"><strong>Stake</strong></div>
+				<div class="col-md-2 text-center"><strong>To win</strong></div>
+			</div>
+			@Html.DisplayFor(m => m.Bet10TimesHigherThanAvg)
+		</div>
 </div>
