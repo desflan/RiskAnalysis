@@ -103,5 +103,49 @@ namespace RiskAnalysis.Services.Tests
 
             Assert.IsNull(result, "Zero not returned when higher than average bets do not exist");
         }
+
+        [TestMethod]
+        public void When_Large_Bets_Exist_Then_Bet_Count_Is_Correct()
+        {
+            var largeBets = new LargeWinAmount(new List<UnsettledBetModel>
+				{
+					new UnsettledBetModel
+						{
+							Id = 1,
+							CustomerId = 1,
+							CustomerName = string.Empty,
+							EventId = 1,
+							ParticipantId = 1,
+							Stake = 100,
+							ToWin = 1000
+						},
+					new UnsettledBetModel
+						{
+							Id = 2,
+							CustomerId = 2,
+							CustomerName = string.Empty,
+							EventId = 2,
+							ParticipantId = 2,
+							Stake = 100,
+							ToWin = 1500
+						},
+					new UnsettledBetModel
+						{
+							Id = 3,
+							CustomerId = 3,
+							CustomerName = string.Empty,
+							EventId = 3,
+							ParticipantId = 3,
+							Stake = 100,
+							ToWin = 500
+						}
+				});
+
+
+            var calculator = new BetCalculatorService();
+            var result = calculator.DoCalculation(largeBets);
+
+            Assert.AreEqual(result.Count, 2, "Incorrect number of bets with large win amount returned");
+        }
     }
 }

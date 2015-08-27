@@ -66,6 +66,7 @@
     <Compile Include="Rules\Interfaces\IBetRisk.cs" />
     <Compile Include="Rules\Interfaces\ICustomerRisk.cs" />
     <Compile Include="Rules\HighWinRate.cs" />
+    <Compile Include="Rules\LargeWinAmount.cs" />
     <Compile Include="Services\Calculator\BetCalculatorService.cs" />
     <Compile Include="Services\Calculator\CustomerCalculatorService.cs" />
     <Compile Include="Services\Calculator\Interfaces\IBetCalculatorService.cs" />

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using RiskAnalysis.Services.DTO;
 using RiskAnalysis.Services.Rules;
 using RiskAnalysis.Services.Services.Calculator.Interfaces;
@@ -31,9 +27,22 @@ namespace RiskAnalysis.Services.Services
             const int multiplier = 10;
 
             var betsAboveAvg = new BetsHigherThanAvg(unsetteledBets, customers, multiplier);
-            var result = _calculator.DoCalculation(betsAboveAvg);
+            return _calculator.DoCalculation(betsAboveAvg);
+        }
 
-            return result;
+
+        public List<UnsettledBetModel> GetBetsWithStake30TimesAboveAvg(IEnumerable<CustomerModel> customers, IEnumerable<UnsettledBetModel> unsetteledBets)
+        {
+            const int multiplier = 30;
+
+            var betsAboveAvg = new BetsHigherThanAvg(unsetteledBets, customers, multiplier);
+            return _calculator.DoCalculation(betsAboveAvg);
+        }
+
+        public List<UnsettledBetModel> GetBetsWithLargeWinAmount(IEnumerable<UnsettledBetModel> unsetteledBets)
+        {
+            var largeWins = new LargeWinAmount(unsetteledBets);
+            return _calculator.DoCalculation(largeWins);
         }
     }
 }
