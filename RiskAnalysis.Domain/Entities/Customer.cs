@@ -26,6 +26,6 @@ namespace RiskAnalysis.Domain.Entities
         {
             get { return _settledBets; }
             set { _settledBets = value; }
-        }
+        } 
     }
 }
